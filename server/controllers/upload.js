@@ -17,9 +17,9 @@ export const createProtectedImg = async (req, res, next) => {
         filename,
         url: path
       },
-      protectedUrl: `http://localhost:4000/${filename}`
     });
     upload.id = upload._id
+    protectedUrl = `http://localhost:4000/share/${upload.id}`
 
     const token = jwt.sign({protectedUrl: upload.protectedUrl, id: upload._id}, 'someSecretToChangeLater', {expiresIn: "1h"})
     
@@ -33,3 +33,7 @@ export const createProtectedImg = async (req, res, next) => {
     next(error)
   }
 };
+
+export const getImageUrl = async (req,res,next)=>{
+
+}

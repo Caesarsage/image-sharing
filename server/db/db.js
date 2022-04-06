@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 
 export const db = async () => {
-  const db = "mongodb+srv://img-sharing:img-sharing@cluster0.4nnlv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  const db = process.env.MONGO_URL
   try {
     const connectMongoose = await mongoose.connect(db, {
       useNewUrlParser: true,

@@ -17,7 +17,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/upload', router)
+app.use('/share', router)
 
 app.all("*", (req, res, next) => {
   next("Page not found", 404);
