@@ -4,7 +4,7 @@ Share image securely to friends and family.
 
 ### Hosted link
 
-[click me](https://www.secure-img-share.netlify.app)
+[click me](https://secure-img-share.netlify.app/)
 
 # Tools
 
